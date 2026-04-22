@@ -1,0 +1,34 @@
+pushn 5
+start
+pushi 14
+storeg 0
+pushg 0
+storeg 1
+pushg 1
+storeg 2
+pushi 0
+storeg 3
+pushg 1
+storeg 4
+pushs "A="
+writes
+pushg 0
+writei
+pushs " B="
+writes
+pushg 1
+writei
+pushs " C="
+writes
+pushg 2
+writei
+pushs " D="
+writes
+pushg 3
+writei
+pushs " E="
+writes
+pushg 4
+writei
+writeln
+stop

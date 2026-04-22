@@ -1,0 +1,48 @@
+pushn 8
+start
+pushs "Introduza um numero inteiro positivo:"
+writes
+writeln
+read
+atoi
+storeg 0
+pushi 1
+storeg 2
+pushi 1
+storeg 1
+pushg 0
+storeg 3
+pushi 1
+storeg 4
+DOTEST1:
+pushg 1
+pushg 3
+infeq
+storeg 5
+pushg 5
+jz DOEXIT2
+pushg 2
+pushg 1
+mul
+storeg 6
+pushg 6
+storeg 2
+L10:
+pushg 1
+pushg 4
+add
+storeg 7
+pushg 7
+storeg 1
+jump DOTEST1
+DOEXIT2:
+pushs "Fatorial de "
+writes
+pushg 0
+writei
+pushs ": "
+writes
+pushg 2
+writei
+writeln
+stop

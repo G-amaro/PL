@@ -1,0 +1,60 @@
+pushn 10
+start
+alloc 5
+storeg 0
+pushi 0
+storeg 2
+pushs "Introduza 5 numeros inteiros:"
+writes
+writeln
+pushi 1
+storeg 1
+pushi 5
+storeg 3
+pushi 1
+storeg 4
+DOTEST1:
+pushg 1
+pushg 3
+infeq
+storeg 5
+pushg 5
+jz DOEXIT2
+read
+atoi
+storeg 6
+pushg 0
+pushg 1
+pushi 1
+sub
+padd
+pushg 6
+store 0
+pushg 0
+pushg 1
+pushi 1
+sub
+padd
+load 0
+storeg 7
+pushg 2
+pushg 7
+add
+storeg 8
+pushg 8
+storeg 2
+L30:
+pushg 1
+pushg 4
+add
+storeg 9
+pushg 9
+storeg 1
+jump DOTEST1
+DOEXIT2:
+pushs "A soma dos numeros e: "
+writes
+pushg 2
+writei
+writeln
+stop

@@ -1,0 +1,24 @@
+pushn 3
+start
+pushi 7
+storeg 0
+pushg 0
+storeg 1
+pusha FN_DOBRA
+call
+pushg 1
+storeg 0
+pushs "Dobro guardado em X: "
+writes
+pushg 0
+writei
+writeln
+stop
+FN_DOBRA:
+pushg 1
+pushi 2
+mul
+storeg 2
+pushg 2
+storeg 1
+return

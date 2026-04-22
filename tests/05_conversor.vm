@@ -1,0 +1,101 @@
+pushn 22
+start
+pushs "INTRODUZA UM NUMERO DECIMAL INTEIRO:"
+writes
+writeln
+read
+atoi
+storeg 0
+pushi 2
+storeg 1
+pushi 9
+storeg 11
+pushi 1
+storeg 12
+DOTEST1:
+pushg 1
+pushg 11
+infeq
+storeg 13
+pushg 13
+jz DOEXIT2
+pushg 0
+storeg 5
+pushg 1
+storeg 6
+pusha FN_CONVRT
+call
+pushg 5
+storeg 0
+pushg 6
+storeg 1
+pushg 4
+storeg 14
+pushg 14
+storeg 2
+pushs "BASE "
+writes
+pushg 1
+writei
+pushs ": "
+writes
+pushg 2
+writei
+writeln
+L10:
+pushg 1
+pushg 12
+add
+storeg 15
+pushg 15
+storeg 1
+jump DOTEST1
+DOEXIT2:
+stop
+FN_CONVRT:
+pushi 0
+storeg 10
+pushi 1
+storeg 9
+pushg 5
+storeg 7
+CONVRT_L20:
+pushg 7
+pushi 0
+sup
+storeg 16
+pushg 16
+jz CONVRT_ENDIF3
+pushg 7
+pushg 6
+mod
+storeg 17
+pushg 17
+storeg 8
+pushg 8
+pushg 9
+mul
+storeg 18
+pushg 10
+pushg 18
+add
+storeg 19
+pushg 19
+storeg 10
+pushg 7
+pushg 6
+div
+storeg 20
+pushg 20
+storeg 7
+pushg 9
+pushi 10
+mul
+storeg 21
+pushg 21
+storeg 9
+jump CONVRT_L20
+CONVRT_ENDIF3:
+pushg 10
+storeg 4
+return
